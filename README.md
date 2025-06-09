@@ -493,9 +493,6 @@ pre-commit install
 - Include type hints
 - Add examples for new features
 
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
 
 ## ⚠️ Legal Notice
 

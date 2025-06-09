@@ -8,7 +8,7 @@ import tempfile
 import os
 from pathlib import Path
 
-from sqlinjector.models import ScanConfig, EndpointConfig, InjectionType, HttpMethod, DatabaseType
+from sqlinjector.models import ScanConfig, InjectionType, HttpMethod, DatabaseType
 from sqlinjector.injector import SQLInjector
 from sqlinjector.scanner import VulnerabilityScanner
 from sqlinjector.payloads import PayloadManager

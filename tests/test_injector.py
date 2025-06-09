@@ -4,6 +4,7 @@ Tests for SQL injection engine
 
 import pytest
 import asyncio
+import re
 from unittest.mock import AsyncMock, patch, MagicMock
 
 from sqlinjector.injector import SQLInjector
@@ -25,7 +26,8 @@ class TestSQLInjector:
     
     def test_discover_injection_points_get(self):
         """Test discovering injection points from GET request"""
-        injector = SQLInjector()
+        config = ScanConfig(url="https://example.com/")
+        injector = SQLInjector(config)
         url = "https://example.com/search.php?q=test&category=1"
         
         points = injector.discover_injection_points(url, HttpMethod.GET)
@@ -37,7 +39,8 @@ class TestSQLInjector:
     
     def test_discover_injection_points_post(self):
         """Test discovering injection points from POST request"""
-        injector = SQLInjector()
+        config = ScanConfig(url="https://example.com/")
+        injector = SQLInjector(config)
         url = "https://example.com/login.php"
         data = {"username": "admin", "password": "test"}
         

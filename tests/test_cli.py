@@ -31,7 +31,7 @@ class TestCLI:
         """Test disclaimer command"""
         result = self.runner.invoke(main, ['disclaimer'])
         assert result.exit_code == 0
-        assert 'LEGAL DISCLAIMER' in result.output
+        assert 'LEGAL AND ETHICAL USE ONLY' in result.output
     
     def test_payloads_command(self):
         """Test payloads command"""
