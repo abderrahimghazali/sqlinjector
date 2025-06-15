@@ -35,7 +35,7 @@ pip install sqlinjector
 ### Development Installation
 
 ```bash
-git clone https://github.com/yourusername/sqlinjector.git
+git clone https://github.com/abderrahimghazali/sqlinjector.git
 cd sqlinjector
 pip install -e ".[dev]"
 ```
@@ -479,7 +479,7 @@ docker-compose -f tests/docker-compose.test.yml down
 ### Development Setup
 
 ```bash
-git clone https://github.com/yourusername/sqlinjector.git
+git clone https://github.com/abderrahimghazali/sqlinjector.git
 cd sqlinjector
 pip install -e ".[dev]"
 pre-commit install
